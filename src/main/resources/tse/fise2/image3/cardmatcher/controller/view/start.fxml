@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tse.fise2.image3.cardmatcher.controller.StartController"  onMouseMoved="#goMenu">
+<Pane   maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"  >
+   <children>
+      <ImageView styleClass="logo"  fx:id="logo" fitHeight="330.0" fitWidth="362.0" layoutX="126.0" layoutY="35.0" onMouseClicked="#goMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/CardMatcherLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
+</VBox>

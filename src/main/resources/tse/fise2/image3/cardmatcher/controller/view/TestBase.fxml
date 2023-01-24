@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="BASELINE_CENTER" prefHeight="600.0" prefWidth="1201.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tse.fise2.image3.cardmatcher.controller.TestSceneController">
+   <children>
+      <MenuBar VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Navigate">
+               <items>
+                  <MenuItem fx:id="btn_nav_menu" mnemonicParsing="false" onAction="#back" text="Menu" />
+                  <MenuItem fx:id="btn_nav_learn" mnemonicParsing="false" onAction="#goLearn" text="Learn" />
+                  <MenuItem fx:id="btn_nav_test" mnemonicParsing="false" onAction="#goTest" text="Test" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Base">
+               <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Base test" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#aboutTestBase" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" prefHeight="578.0" prefWidth="992.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="454.0" prefWidth="463.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="466.0">
+                     <children>
+                        <ImageView fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/carte1-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="210.0" text="Test Base" textFill="#563b96">
+                           <font>
+                              <Font name="Yu Mincho Demibold" size="38.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/carte2-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TextField fx:id="search_field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="466.0" promptText="Search" />
+                  <ListView fx:id="mylistview" prefHeight="389.0" prefWidth="466.0">
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin></ListView>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="570.0" prefWidth="577.0">
+               <children>
+                  <Label fx:id="label_carte" text="~ Selected card ~" textFill="#8d9eff" underline="true">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="277.0" prefWidth="508.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fx:id="small_img_card" fitHeight="146.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/fond_carte.jpg" />
+                                 </image></ImageView>
+                              <Label fx:id="label_small_card" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fx:id="image_base" fitHeight="277.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@../../images/fond_carte.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="146.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="label_base_test" alignment="CENTER" prefHeight="21.0" prefWidth="187.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="btn_interets" mnemonicParsing="false" onAction="#displayPtsInterets" text="Keypoints">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btn_correspondance" mnemonicParsing="false" onAction="#displayCorrespondance" text="Match" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

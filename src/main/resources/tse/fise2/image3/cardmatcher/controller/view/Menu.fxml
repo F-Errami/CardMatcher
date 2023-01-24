@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="BASELINE_CENTER" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tse.fise2.image3.cardmatcher.controller.MenuController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Navigate">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onClickedtest" text="test" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickedApp" text="learning" />
+
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
+                    </items>
+                </Menu>
+                <!--                <Menu mnemonicParsing="false" text="Edit">-->
+                <!--                    <items>-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Undo" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Redo" />-->
+                <!--                        <SeparatorMenuItem mnemonicParsing="false" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Cut" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Copy" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Paste" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Delete" />-->
+                <!--                        <SeparatorMenuItem mnemonicParsing="false" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Select All" />-->
+                <!--                        <MenuItem mnemonicParsing="false" text="Unselect All" />-->
+                <!--                    </items>-->
+                <!--                </Menu>-->
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About CardMatcher" onAction="#about"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox alignment="CENTER" prefHeight="569.0" prefWidth="486.0" styleClass="title" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="appName" contentDisplay="CENTER" layoutY="44.0" style="-fx-font-weight: bolder;" text="CardMatcher" textAlignment="CENTER">
+                            <font>
+                                <Font name="Thonburi" size="96.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <InnerShadow height="118.66" offsetY="10.0" radius="88.4925" width="237.31">
+                            <color>
+                                <Color opacity="0.8336520195007324" />
+                            </color>
+                        </InnerShadow>
+                    </effect>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="569.0" prefWidth="367.0" style="-fx-background-color: fff;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="161.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../icons/CardMatcherLogo2.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="50.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="btn_test" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onClickedtest" prefHeight="52.0" prefWidth="161.0" styleClass="mainbutton" text="Test mode" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets bottom="40.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="btn_app" alignment="CENTER" mnemonicParsing="false" onAction="#onClickedApp" prefHeight="51.0" prefWidth="160.0" styleClass="mainbutton" text="Learning mode" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+
+    <stylesheets>
+        <URL value="@../../css/styles.css" />
+    </stylesheets>
+</VBox>
